@@ -4,15 +4,15 @@
 @import './_mixins';
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
 }
 
-body{
-    color: $text-color-dark;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+body {
+  color: $text-color-dark;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

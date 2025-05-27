@@ -1,4 +1,4 @@
-[
+ [
      {
        "name": "Dev Lens",
        "description": "Quickly inspect page layouts and visualize element boundaries.",
@@ -60,3 +60,4 @@
        "active": true
      }
    ]
+   

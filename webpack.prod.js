@@ -6,7 +6,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { output, devtool } = require('./webpack.dev');
 
 module.exports = {
-    mode: 'production',
+    // mode: 'production',
+     mode: process.env.NODE_ENV === 'production' ? 'production' : null,
     entry: {
     main:  './src/index.ts',
     vendor: ['lodash'],
