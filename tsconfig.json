@@ -1,15 +1,16 @@
 {
-  "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "main": "src/index.ts",
-    "skipLibCheck": true,
-    "lib": [
-      "dom",
-      "es2015.promise",
-      "es5"
-    ]
-  }
-}
+     "compilerOptions": {
+       "target": "ES6",
+       "module": "ESNext",
+       "strict": true,
+       "esModuleInterop": true,
+       "skipLibCheck": true,
+       "moduleResolution": "node",
+       "outDir": "./dist",
+       "rootDir": "./src",
+       "sourceMap": true,
+       "types": ["jest", "node"]
+     },
+     "include": ["src/**/*"],
+     "exclude": ["node_modules", "dist"]
+   }
