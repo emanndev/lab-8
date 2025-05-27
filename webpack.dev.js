@@ -7,7 +7,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        clean: true // Clean the output directory before emitting files.
+        clean: true 
     },
        devtool: 'inline-source-map',
        devServer: {

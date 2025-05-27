@@ -1,0 +1,62 @@
+[
+     {
+       "name": "Dev Lens",
+       "description": "Quickly inspect page layouts and visualize element boundaries.",
+       "active": true
+     },
+     {
+       "name": "StyleSpy",
+       "description": "Instantly analyze and copy CSS from any webpage element.",
+       "active": true
+     },
+     {
+       "name": "SpeedBoost",
+       "description": "Optimizes browser resource usage to accelerate page loading.",
+       "active": false
+     },
+     {
+       "name": "JSONWizard",
+       "description": "Formats, validates, and prettifies JSON responses in-browser.",
+       "active": true
+     },
+     {
+       "name": "TabMaster Pro",
+       "description": "Organizes browser tabs into groups and sessions.",
+       "active": false
+     },
+     {
+       "name": "ViewportBuddy",
+       "description": "Simulates various screen resolutions directly within the browser.",
+       "active": true
+     },
+     {
+       "name": "Markup Notes",
+       "description": "Enables annotation and notes directly onto webpages for collaborative debugging.",
+       "active": false
+     },
+     {
+       "name": "GridGuides",
+       "description": "Overlay customizable grids and alignment guides on any webpage.",
+       "active": true
+     },
+     {
+       "name": "Palette Picker",
+       "description": "Instantly extracts color palettes from any webpage.",
+       "active": false
+     },
+     {
+       "name": "LinkChecker",
+       "description": "Scans and highlights broken links on any page.",
+       "active": true
+     },
+     {
+       "name": "DOM Snapshot",
+       "description": "Capture and export DOM structures quickly.",
+       "active": false
+     },
+     {
+       "name": "ConsolePlus",
+       "description": "Enhanced developer console with advanced filtering and logging.",
+       "active": true
+     }
+   ]
