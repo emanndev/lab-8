@@ -1,37 +1,21 @@
-$bg-color-light: #f5f7fa; 
-$bg-color-dark: #1a202c; 
-$text-color-light: #2d3748; 
-$text-color-dark: #e2e8f0; 
-$secondary-text-light: #6b7280; 
-$secondary-text-dark: #a0aec0; 
-$card-bg-light: #ffffff; 
-$card-bg-dark: #2d3748; 
-$card-border-light: #e2e8f0; 
-$card-border-dark: #4a5568; 
-$primary-accent: #3b82f6; 
-$secondary-accent: #2563eb; 
-$primary-accent-dark: #60a5fa; 
-$secondary-accent-dark: #3b82f6; 
-$header-gradient-light: linear-gradient(
-  90deg,
-  #3b82f6,
-  #60a5fa
-); 
-$header-gradient-dark: linear-gradient(
-  90deg,
-  #60a5fa,
-  #93c5fd
-); 
-$footer-gradient-light: linear-gradient(
-  90deg,
-  #3b82f6,
-  #60a5fa
-); 
-$footer-gradient-dark: linear-gradient(
-  90deg,
-  #60a5fa,
-  #93c5fd
-); 
+$bg-color-light: #f5f7fa;
+$bg-color-dark: #1a202c;
+$text-color-light: #2d3748;
+$text-color-dark: #e2e8f0;
+$secondary-text-light: #6b7280;
+$secondary-text-dark: #a0aec0;
+$card-bg-light: #ffffff;
+$card-bg-dark: #2d3748;
+$card-border-light: #e2e8f0;
+$card-border-dark: #4a5568;
+$primary-accent: #3b82f6;
+$secondary-accent: #2563eb;
+$primary-accent-dark: #60a5fa;
+$secondary-accent-dark: #3b82f6;
+$header-gradient-light: linear-gradient(90deg, #3b82f6, #60a5fa);
+$header-gradient-dark: linear-gradient(90deg, #60a5fa, #93c5fd);
+$footer-gradient-light: linear-gradient(90deg, #3b82f6, #60a5fa);
+$footer-gradient-dark: linear-gradient(90deg, #60a5fa, #93c5fd);
 $shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
 $shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.2);
 $transition: all 0.3s ease;

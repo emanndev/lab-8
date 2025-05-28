@@ -31,7 +31,6 @@ header {
   z-index: 1000;
   transition: $transition;
 
-
   .header-content {
     max-width: 1280px;
     margin: 0 auto;
@@ -48,7 +47,7 @@ header {
     i {
       font-size: 2rem;
       color: $text-color-dark;
-      transition: color 0.3s ease; 
+      transition: color 0.3s ease;
 
       &[data-theme='light'] {
         color: $text-color-light;
@@ -118,7 +117,11 @@ header {
     }
 
     &[data-theme='light'] {
-      @include button-style($card-bg-light, $text-color-light, $card-border-light);
+      @include button-style(
+        $card-bg-light,
+        $text-color-light,
+        $card-border-light
+      );
       &:hover {
         background-color: color.adjust($card-bg-light, $lightness: -20%);
       }
@@ -187,7 +190,6 @@ main.wrapper {
   gap: 1.5rem;
   animation: fadeInUp 0.5s ease-out;
 
-  
   @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -208,7 +210,10 @@ main.wrapper {
   box-shadow: $shadow-dark;
   opacity: 0;
   animation: cardEnter 0.5s ease-out forwards;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
 
   &:hover {
     transform: scale(1.02);
@@ -250,7 +255,11 @@ main.wrapper {
     align-items: center;
     width: 60px;
     height: 60px;
-    background: linear-gradient(45deg, $primary-accent-dark, $secondary-accent-dark);
+    background: linear-gradient(
+      45deg,
+      $primary-accent-dark,
+      $secondary-accent-dark
+    );
     border-radius: 50%;
     margin-bottom: 1rem;
     transition: transform 0.3s ease;
@@ -346,7 +355,9 @@ main.wrapper {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    transition: box-shadow 0.3s ease, background 0.3s ease;
+    transition:
+      box-shadow 0.3s ease,
+      background 0.3s ease;
 
     &:hover {
       background: $secondary-accent-dark;
@@ -394,7 +405,7 @@ main.wrapper {
 
       &:before {
         position: absolute;
-        content: "";
+        content: '';
         height: 16px;
         width: 16px;
         left: 2px;
