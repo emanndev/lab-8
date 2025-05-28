@@ -1,63 +1,82 @@
- [
-     {
-       "name": "Dev Lens",
-       "description": "Quickly inspect page layouts and visualize element boundaries.",
-       "active": true
-     },
-     {
-       "name": "StyleSpy",
-       "description": "Instantly analyze and copy CSS from any webpage element.",
-       "active": true
-     },
-     {
-       "name": "SpeedBoost",
-       "description": "Optimizes browser resource usage to accelerate page loading.",
-       "active": false
-     },
-     {
-       "name": "JSONWizard",
-       "description": "Formats, validates, and prettifies JSON responses in-browser.",
-       "active": true
-     },
-     {
-       "name": "TabMaster Pro",
-       "description": "Organizes browser tabs into groups and sessions.",
-       "active": false
-     },
-     {
-       "name": "ViewportBuddy",
-       "description": "Simulates various screen resolutions directly within the browser.",
-       "active": true
-     },
-     {
-       "name": "Markup Notes",
-       "description": "Enables annotation and notes directly onto webpages for collaborative debugging.",
-       "active": false
-     },
-     {
-       "name": "GridGuides",
-       "description": "Overlay customizable grids and alignment guides on any webpage.",
-       "active": true
-     },
-     {
-       "name": "Palette Picker",
-       "description": "Instantly extracts color palettes from any webpage.",
-       "active": false
-     },
-     {
-       "name": "LinkChecker",
-       "description": "Scans and highlights broken links on any page.",
-       "active": true
-     },
-     {
-       "name": "DOM Snapshot",
-       "description": "Capture and export DOM structures quickly.",
-       "active": false
-     },
-     {
-       "name": "ConsolePlus",
-       "description": "Enhanced developer console with advanced filtering and logging.",
-       "active": true
-     }
-   ]
-   
+[
+  {
+    "name": "Webpack",
+    "description": "A static module bundler for modern JavaScript applications, optimizing assets for production.",
+    "version": "5.88.2",
+    "numberOfDownloads": 2500000,
+    "lastUpdated": "2025-05-01",
+    "homepage": "https://webpack.js.org/",
+    "active": true,
+    "icon": "fas fa-cogs"
+  },
+  {
+    "name": "TypeScript",
+    "description": "A typed superset of JavaScript that compiles to plain JavaScript, enhancing code reliability.",
+    "version": "5.2.2",
+    "numberOfDownloads": 3500000,
+    "lastUpdated": "2025-04-15",
+    "homepage": "https://www.typescriptlang.org/",
+    "active": true,
+    "icon": "fas fa-code"
+  },
+  {
+    "name": "Sass",
+    "description": "A CSS preprocessor with features like variables, nesting, and mixins for efficient styling.",
+    "version": "1.68.0",
+    "numberOfDownloads": 1800000,
+    "lastUpdated": "2025-03-10",
+    "homepage": "https://sass-lang.com/",
+    "active": true,
+    "icon": "fas fa-paint-brush"
+  },
+  {
+    "name": "ESLint",
+    "description": "A pluggable linting utility for JavaScript and TypeScript, enforcing code quality.",
+    "version": "8.50.0",
+    "numberOfDownloads": 2000000,
+    "lastUpdated": "2025-04-20",
+    "homepage": "https://eslint.org/",
+    "active": true,
+    "icon": "fas fa-check-circle"
+  },
+  {
+    "name": "Prettier",
+    "description": "An opinionated code formatter for consistent styling across JavaScript, CSS, and more.",
+    "version": "3.0.3",
+    "numberOfDownloads": 1500000,
+    "lastUpdated": "2025-03-25",
+    "homepage": "https://prettier.io/",
+    "active": true,
+    "icon": "fas fa-magic"
+  },
+  {
+    "name": "Jest",
+    "description": "A delightful JavaScript testing framework with a focus on simplicity and performance.",
+    "version": "29.7.0",
+    "numberOfDownloads": 1200000,
+    "lastUpdated": "2025-04-05",
+    "homepage": "https://jestjs.io/",
+    "active": true,
+    "icon": "fas fa-vial"
+  },
+  {
+    "name": "Husky",
+    "description": "A tool to manage Git hooks, ensuring code quality checks before commits.",
+    "version": "8.0.3",
+    "numberOfDownloads": 800000,
+    "lastUpdated": "2025-03-30",
+    "homepage": "https://typicode.github.io/husky/",
+    "active": true,
+    "icon": "fas fa-dog"
+  },
+  {
+    "name": "Babel",
+    "description": "A JavaScript compiler to transform modern JavaScript for broader browser compatibility.",
+    "version": "7.23.0",
+    "numberOfDownloads": 3000000,
+    "lastUpdated": "2025-04-10",
+    "homepage": "https://babeljs.io/",
+    "active": true,
+    "icon": "fas fa-exchange-alt"
+  }
+]
