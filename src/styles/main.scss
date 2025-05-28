@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'sass:color';
 
-@import './_variables';
-@import './_mixins';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   margin: 0;
@@ -12,7 +13,428 @@
 
 body {
   color: $text-color-dark;
+  min-height: 100vh;
+  background-color: $bg-color-dark;
+  transition: $transition;
+
+  &[data-theme='light'] {
+    background-color: $bg-color-light;
+    color: $text-color-light;
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: $header-gradient-dark;
+  padding: 1rem 2rem;
+  box-shadow: $shadow-dark;
+  z-index: 1000;
+
+  &[data-theme='light'] {
+    background: $header-gradient-light;
+    box-shadow: $shadow-light;
+  }
+
+  .header-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    i {
+      font-size: 2rem;
+      color: $text-color-dark;
+
+      &[data-theme='light'] {
+        color: $text-color-light;
+      }
+    }
+
+    .heading {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: $text-color-dark;
+
+      &[data-theme='light'] {
+        color: $text-color-light;
+      }
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .search-bar {
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    border: 1px solid $card-border-dark;
+    background-color: $card-bg-dark;
+    color: $text-color-dark;
+    width: 250px;
+    transition: $transition;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-accent;
+    }
+
+    &[data-theme='light'] {
+      border-color: $card-border-light;
+      background-color: $card-bg-light;
+      color: $text-color-light;
+    }
+  }
+
+  .filters {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .btn {
+    @include button-style($card-bg-dark, $text-color-dark, $card-border-dark);
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background-color: color.adjust($card-bg-dark, $lightness: -10%);
+    }
+
+    &.active {
+      background: $primary-accent-dark;
+      color: $text-color-dark;
+    }
+
+    &[data-theme='light'] {
+      @include button-style($card-bg-light, $text-color-light, $card-border-light);
+
+      &:hover {
+        background-color: color.adjust($card-bg-light, $lightness: -5%);
+      }
+
+      &.active {
+        background: $primary-accent;
+        color: $text-color-dark;
+      }
+    }
+  }
+
+  .theme-toggle {
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: $card-bg-dark;
+    border: none;
+    cursor: pointer;
+    transition: $transition;
+
+    i {
+      font-size: 1.25rem;
+      color: $text-color-dark;
+    }
+
+    &:hover {
+      background: color.adjust($card-bg-dark, $lightness: -10%);
+    }
+
+    &[data-theme='light'] {
+      background: $card-bg-light;
+
+      i {
+        color: $text-color-light;
+      }
+
+      &:hover {
+        background: color.adjust($card-bg-light, $lightness: -5%);
+      }
+    }
+  }
+}
+
+main.wrapper {
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card-group {
+  background: $card-bg-dark;
+  border: 1px solid $card-border-dark;
+  border-radius: 12px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  gap: 1rem;
+  box-shadow: $shadow-dark;
+  transition: $transition;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  &[data-theme='light'] {
+    background: $card-bg-light;
+    border-color: $card-border-light;
+    box-shadow: $shadow-light;
+
+    &:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, $primary-accent-dark, $secondary-accent-dark);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+
+    i {
+      font-size: 1.5rem;
+      color: $text-color-dark;
+    }
+
+    &[data-theme='light'] {
+      background: linear-gradient(45deg, $primary-accent, $secondary-accent);
+      i {
+        color: $text-color-light;
+      }
+    }
+  }
+
+  .icons-info {
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: $text-color-dark;
+      margin-bottom: 0.5rem;
+
+      &[data-theme='light'] {
+        color: $text-color-light;
+      }
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: $secondary-text-dark;
+      margin-bottom: 1rem;
+
+      &[data-theme='light'] {
+        color: $secondary-text-light;
+      }
+    }
+  }
+
+  .tool-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: $secondary-text-dark;
+
+    i {
+      font-size: 1rem;
+    }
+
+    &[data-theme='light'] {
+      color: $secondary-text-light;
+    }
+  }
+
+  small {
+    font-size: 0.75rem;
+    color: $secondary-text-dark;
+
+    &[data-theme='light'] {
+      color: $secondary-text-light;
+    }
+  }
+
+  .card-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  .card-btn {
+    @include button-style($primary-accent-dark, $text-color-dark, transparent);
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    border-radius: 999px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: $transition;
+
+    &:hover {
+      background: $secondary-accent-dark;
+    }
+
+    &[data-theme='light'] {
+      @include button-style($primary-accent, $text-color-dark, transparent);
+
+      &:hover {
+        background: $secondary-accent;
+      }
+    }
+  }
+
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      &:checked + .slider {
+        background: $primary-accent-dark;
+      }
+
+      &:checked + .slider:before {
+        transform: translateX(18px);
+      }
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $card-border-dark;
+      transition: $transition;
+      border-radius: 999px;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 2px;
+        bottom: 2px;
+        background: white;
+        transition: $transition;
+        border-radius: 50%;
+      }
+
+      &[data-theme='light'] {
+        background: $card-border-light;
+
+        &:before {
+          background: $text-color-light;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  background: $footer-gradient-dark;
+  padding: 1rem;
+  text-align: center;
+  color: $text-color-dark;
+
+  p {
+    font-size: 0.75rem;
+    transition: $transition;
+
+    &:hover {
+      color: $primary-accent-dark;
+    }
+  }
+
+  &[data-theme='light'] {
+    background: $footer-gradient-light;
+    color: $text-color-light;
+
+    p:hover {
+      color: $primary-accent;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  header .header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  header .header-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  header .search-bar {
+    width: 100%;
+  }
+
+  header .filters {
+    width: 100%;
+  }
+
+  header .btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  header .header-actions {
+    gap: 0.75rem;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
