@@ -1,36 +1,37 @@
-$bg-color-dark: #091540;
-$bg-color-light: #fff;
-$text-color-dark: #fff;
-$text-color-light: #091540;
-$header-bg-dark: #202535;
-$header-bg-light: #fbfdfe;
-$card-bg-dark: #202535;
-$card-bg-light: #fff;
-$card-border-dark: #535868;
-$card-border-light: #d6e2f5;
-$btn-primary-bg: #f25c54;
-$btn-primary-text-dark: #091540;
-$btn-primary-text-light: #fbfdfe;
-$btn-secondary-bg-dark: #2f364b;
-$btn-secondary-bg-light: #fbfdfe;
-$btn-secondary-text-dark: #fbfdfe;
-$btn-secondary-text-light: #091540;
-$btn-border-dark: #535868;
-$btn-border-light: #d6e2f5;
-$theme-toggle-bg-dark: #535868;
-$theme-toggle-bg-light: #d6e2f5;
-$icon-filter-dark: none;
-$icon-filter-light: brightness(0) saturate(100%) invert(13%) sepia(15%)
-  saturate(2102%) hue-rotate(201deg) brightness(93%) contrast(96%);
-$skeleton-gradient-dark: linear-gradient(
-  to right,
-  #202535 8%,
-  #2f364b 18%,
-  #202535 33%
-);
-$skeleton-gradient-light: linear-gradient(
-  to right,
-  #f0f0f0 8%,
-  #e0e0e0 18%,
-  #f0f0f0 33%
-);
+$bg-color-light: #f5f7fa; // Soft off-white
+$bg-color-dark: #1a202c; // Deep charcoal
+$text-color-light: #2d3748; // Dark gray
+$text-color-dark: #e2e8f0; // Light gray
+$secondary-text-light: #6b7280; // Muted gray
+$secondary-text-dark: #a0aec0; // Muted gray
+$card-bg-light: #ffffff; // Pure white
+$card-bg-dark: #2d3748; // Dark gray
+$card-border-light: #e2e8f0; // Light gray
+$card-border-dark: #4a5568; // Darker gray
+$primary-accent: #3b82f6; // Vibrant blue
+$secondary-accent: #2563eb; // Darker blue
+$primary-accent-dark: #60a5fa; // Lighter blue for dark theme
+$secondary-accent-dark: #3b82f6; // Darker blue for dark theme
+$header-gradient-light: linear-gradient(
+  90deg,
+  #3b82f6,
+  #60a5fa
+); // Blue gradient
+$header-gradient-dark: linear-gradient(
+  90deg,
+  #60a5fa,
+  #93c5fd
+); // Softer blue gradient
+$footer-gradient-light: linear-gradient(
+  90deg,
+  #3b82f6,
+  #60a5fa
+); // Blue gradient
+$footer-gradient-dark: linear-gradient(
+  90deg,
+  #60a5fa,
+  #93c5fd
+); // Softer blue gradient
+$shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+$shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.2);
+$transition: all 0.3s ease;
