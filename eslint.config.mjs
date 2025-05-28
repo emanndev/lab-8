@@ -6,7 +6,7 @@ import { defineConfig} from "eslint/config";
 
 export default defineConfig([
    {
-    // 🔧 Add this block for ignored files
+    
     ignores: ["dist/", "node_modules/"],
   },
   { 

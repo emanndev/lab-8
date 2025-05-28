@@ -15,7 +15,8 @@ module.exports = {
     output:{
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[contenthash].js',
-        clean: true 
+        clean: true,
+        assetModuleFilename: 'assets/images/[name][ext][query]', 
     },
     devtool: 'source-map',
     module: {
@@ -51,7 +52,7 @@ module.exports = {
              new TerserWebpackPlugin(),
              new CssMinimizerPlugin(),
            ],
-           splitChuncks: {
+           splitChunks: {
              cacheGroups:{
                 vendor: {
                    test: /[\\/]node_modules[\\/](lodash)[\\/]/,

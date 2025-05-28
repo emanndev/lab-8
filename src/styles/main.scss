@@ -120,7 +120,11 @@ header {
     }
 
     &[data-theme='light'] {
-      @include button-style($card-bg-light, $text-color-light, $card-border-light);
+      @include button-style(
+        $card-bg-light,
+        $text-color-light,
+        $card-border-light
+      );
 
       &:hover {
         background-color: color.adjust($card-bg-light, $lightness: -5%);
@@ -216,7 +220,11 @@ main.wrapper {
     align-items: center;
     width: 60px;
     height: 60px;
-    background: linear-gradient(45deg, $primary-accent-dark, $secondary-accent-dark);
+    background: linear-gradient(
+      45deg,
+      $primary-accent-dark,
+      $secondary-accent-dark
+    );
     border-radius: 50%;
     margin-bottom: 1rem;
 
@@ -351,7 +359,7 @@ main.wrapper {
 
       &:before {
         position: absolute;
-        content: "";
+        content: '';
         height: 16px;
         width: 16px;
         left: 2px;

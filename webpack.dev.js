@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     // mode: 'development',
      mode: process.env.NODE_ENV === 'production' ? 'development' : null,
-    entry: './index.ts',
+    entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
@@ -41,5 +41,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         })
-    ]
+    ],
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'bundle.js',
+      clean: true,
+      assetModuleFilename: 'assets/images/[name][ext][query]', // Preserve original file name and structure
+    },
 }
