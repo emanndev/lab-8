@@ -84,7 +84,7 @@ export class ExtensionsManager {
     this.extensionsList.innerHTML = sortedTools
       .map(
         (tool) => `
-          <div class="card-group">
+          <div class="card-group cards">
             <div class="icon-container">
               <i class="${tool.icon}" aria-hidden="true"></i>
             </div>
