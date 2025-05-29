@@ -118,7 +118,7 @@ describe('ExtensionsManager', () => {
       searchBar.dispatchEvent(new Event('input'));
 
       const cards = extensionsList.querySelectorAll('.card-group');
-      expect(cards.length).toBe(2)
+      expect(cards.length).toBe(2);
       expect(cards[0].textContent).toMatch(/TypeScript/i);
     });
 
