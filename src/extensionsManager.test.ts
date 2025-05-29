@@ -1,9 +1,11 @@
 import { ExtensionsManager } from './extensionsManager';
 
-jest.mock('../data/data.json', () => import('./__mocks__/data.json'), { virtual: true });
+jest.mock('../data/data.json', () => import('./__mocks__/data.json'), {
+  virtual: true,
+});
 
 describe('ExtensionsManager', () => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let extensionsManager: ExtensionsManager;
   let extensionsList: HTMLElement;
   let filterAll: HTMLButtonElement;
@@ -42,8 +44,12 @@ describe('ExtensionsManager', () => {
 
     extensionsList = document.getElementById('extensions-list') as HTMLElement;
     filterAll = document.getElementById('filter-all') as HTMLButtonElement;
-    filterActive = document.getElementById('filter-active') as HTMLButtonElement;
-    filterInactive = document.getElementById('filter-inactive') as HTMLButtonElement;
+    filterActive = document.getElementById(
+      'filter-active'
+    ) as HTMLButtonElement;
+    filterInactive = document.getElementById(
+      'filter-inactive'
+    ) as HTMLButtonElement;
     searchBar = document.getElementById('search-bar') as HTMLInputElement;
 
     extensionsManager = new ExtensionsManager();
@@ -56,7 +62,7 @@ describe('ExtensionsManager', () => {
   describe('initial rendering', () => {
     it('renders all tools on initialization with filter "all"', () => {
       const cards = extensionsList.querySelectorAll('.card-group');
-      expect(cards.length).toBe(8); 
+      expect(cards.length).toBe(8);
       expect(cards[0].textContent).toMatch(/Babel/i);
       expect(cards[1].textContent).toMatch(/ESLint/i);
       expect(cards[7].textContent).toMatch(/Webpack/i);
@@ -77,14 +83,14 @@ describe('ExtensionsManager', () => {
     });
 
     it('renders all tools when filter-all is clicked after another filter', () => {
-      filterActive.click(); 
-      filterAll.click(); 
+      filterActive.click();
+      filterAll.click();
       const cards = extensionsList.querySelectorAll('.card-group');
-      expect(cards.length).toBe(8); 
+      expect(cards.length).toBe(8);
     });
 
     it('sets "all" filter when filter-all is clicked', () => {
-      filterActive.click(); 
+      filterActive.click();
       filterAll.click();
       expect(filterAll.classList.contains('active')).toBe(true);
       expect(filterActive.classList.contains('active')).toBe(false);
@@ -129,7 +135,9 @@ describe('ExtensionsManager', () => {
     it('opens homepage links in new tab on click', () => {
       const openSpy = jest.spyOn(window, 'open').mockImplementation(() => null);
 
-      const homepageBtn = extensionsList.querySelector('.card-btn') as HTMLAnchorElement;
+      const homepageBtn = extensionsList.querySelector(
+        '.card-btn'
+      ) as HTMLAnchorElement;
       homepageBtn.click();
 
       expect(openSpy).toHaveBeenCalledWith('https://babeljs.io/', '_blank');
@@ -139,7 +147,9 @@ describe('ExtensionsManager', () => {
 
   describe('attachToggleListeners', () => {
     it('toggles active state and re-renders on toggle change', () => {
-      const toggleInput = extensionsList.querySelector('input[type="checkbox"]') as HTMLInputElement;
+      const toggleInput = extensionsList.querySelector(
+        'input[type="checkbox"]'
+      ) as HTMLInputElement;
       toggleInput.checked = false;
       toggleInput.dispatchEvent(new Event('change'));
 
