@@ -16,8 +16,6 @@ export class ThemeManager {
   ) as HTMLInputElement;
   private navbuttons: NodeListOf<HTMLButtonElement> =
     document.querySelectorAll('.btn');
-  private cards: NodeListOf<HTMLElement> =
-    document.querySelectorAll('.card-group');
 
   constructor() {
     this.initializeTheme();
@@ -59,9 +57,9 @@ export class ThemeManager {
     this.navbuttons.forEach((button) => {
       button.dataset.theme = 'light';
     });
-    this.cards.forEach((card) => {
-      card.dataset.theme = 'light';
-    });
+    // this.cards.forEach((card) => {
+    //   card.dataset.theme = 'light';
+    // });
     localStorage.setItem('theme', 'light');
   }
 

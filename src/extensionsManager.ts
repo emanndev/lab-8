@@ -98,7 +98,7 @@ export class ExtensionsManager {
               </div>
             </div>
             <div class="card-buttons">
-              <a href="${tool.homepage}" target="_blank" class="card-btn"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Visit Homepage</a>
+              <a href="${tool.homepage}" target="_blank" class="card-btn"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Get More Info</a>
               <label class="toggle-switch">
                 <input type="checkbox" ${tool.active ? 'checked' : ''} data-index="${this.tools.indexOf(tool)}">
                 <span class="slider"></span>

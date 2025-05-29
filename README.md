@@ -1,61 +1,116 @@
-Build Tool Showcase
-A modern web application to showcase popular build tools with a professional UI, featuring search, filtering, and light/dark theme support. Built with TypeScript, SCSS, and Font Awesome icons, this project aims to provide a clean and responsive experience across devices.
-Features
+# Build Tool Showcase
 
-Modern UI: Professional design with a sleek header, responsive card layout, and gradient accents.
-Light/Dark Themes: Toggle between beautiful light and dark themes with smooth transitions.
-Search and Filter: Search build tools by name or description, and filter by status (All, Active, Inactive).
-Responsive Design: Adapts seamlessly to mobile, tablet, and desktop screens (1/2/3-column layouts).
-Font Awesome Icons: Unique icons for each build tool, plus icons for version, downloads, and more.
-Interactive Cards: Hover effects, toggle switches for active/inactive status, and homepage links.
+A web application to showcase popular build tools, featuring filtering, searching, and theme toggling functionalities. Built with TypeScript, SCSS, Webpack, and tested with Jest.
 
-Tech Stack
+## Features
 
-TypeScript: For type-safe JavaScript development.
-Webpack: For development and build project and bundling files together as one for production.
-SCSS: For modular and maintainable styles.
-Font Awesome: For modern, scalable icons.
-Lodash: For utility functions (e.g., filtering, sorting).
-ESLint: For linting and maintaining code quality.
+Dynamic Tool Listing: Displays build tools from data.json with details like version, downloads, and homepage links.
+Filtering: Filter tools by status (All, Active, Inactive).
+Search: Search tools by name.
+Theme Toggling: Switch between light and dark themes, with preferences saved in localStorage.
+Responsive Design: Styled with SCSS for a clean, responsive UI.
+Testing: Unit tests for core functionality using Jest.
+Deployment: Deployed to GitHub Pages.
 
+## Tech Stack
 
-Setup Instructions
+Frontend: TypeScript, SCSS
+Build Tool: Webpack
+Traspiling: Babel(babel-loader)
+Testing: Jest, ts-jest, jest-environment-jsdom
+Linting/Formatting: ESLint, Prettier
+Deployment: GitHub Pages
+Dependencies: Lodash (for filtering and sorting)
 
-Clone the Repository:git clone https://github.com/your-username/build-tool-showcase.git
-cd build-tool-showcase
+## Project Structure
 
+build-tools-project/
+├── src/
+│   ├── __mocks__/
+│   │   └── data.json
+│   ├── styles/
+│   │   └── main.scss
+|   |   └── _variables.scss
+|   |   └──_mixin.scss
+│   ├── extensionsManager.ts
+│   ├── themeManager.ts
+│   ├── types.ts
+│   ├── index.ts
+│   ├── themeManager.test.ts
+│   └── extensionsManager.test.ts
+├── data/
+│   └── data.json
+├── dist/
+├── index.html
+├── package.json
+├── webpack.dev.js
+├── webpack.prod.js
+├── jest.config.js
+└── jest.setup.ts
 
-Install Dependencies:npm install
+## Prerequisites
 
+Node.js (v18 or higher)
+npm (v9 or higher)
 
-Run the Development Server:npm run dev
+## Setup
 
+Clone the Repository:
+git clone <https://github.com/your-username/build-tools-project.git>
+cd build-tools-project
 
-Open http://localhost:3000 in your browser to view the app.
+Switch to Development Branch:
+git checkout development
 
+Install Dependencies:
+npm install
 
-Build for Production:npm run build
-npx http-server dist
+Run Locally:
+npm run dev
 
+Opens at <http://localhost:8080> (or another port if configured differently in webpack.dev.js).
 
-Open http://localhost:8080 to view the production build.
+Build
+To generate production-ready files:
+npm run build
 
+Outputs to the dist/ folder.
 
+Testing
+Run unit tests with Jest:
+npm test
 
-Usage
+Tests are located in themeManager.test.ts and extensionsManager.test.ts.
 
-Search: Use the search bar in the header to find build tools by name or description.
-Filter: Click "All", "Active", or "Inactive" buttons to filter tools by status.
-Toggle Theme: Click the theme toggle icon (moon/sun) in the header to switch between light and dark themes.
-Interact with Cards: Hover over cards for a subtle scale effect, toggle the active/inactive switch, or click "Visit Homepage" to open the tool’s website.
+Code Quality
+Ensure code quality with linting and formatting:
+npm run check
 
+Runs ESLint (npm run lint) and Prettier (npm run format).
 
+Deployment
+GitHub Pages
+
+Deployed from the development branch to the gh-pages branch.
+URL: [https://your-username.github.io/build-tools-project/](https://your-username.github.io/build-tools-project/)
+Deploy Command:npm run deploy
+
+Continuous deployment is set up via GitHub Actions (see .github/workflows/deploy.yml).
+
+## Usage
+
+Filter Tools: Click the "All", "Active", or "Inactive" buttons to filter tools.
+Search Tools: Use the search bar to find tools by name or description.
+Toggle Theme: Click the theme toggle button to switch between light and dark modes.
+Visit Homepages: Click "Visit Homepage" to open a tool’s website in a new tab.
+
+## Contributing
 
 Fork the repository.
-Create a new branch (git checkout -b feature/your-feature).
-Make your changes and commit (git commit -m "Add your feature").
-Push to your branch (git push origin feature/your-feature).
-Open a Pull Request.
+Create a feature branch (git checkout -b feature/your-feature).
+Commit changes (git commit -m "Add your feature").
+Push to the branch (git push origin feature/your-feature).
+Open a pull request against the development branch.
 
 License
-No license
+No License
