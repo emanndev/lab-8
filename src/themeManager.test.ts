@@ -1,7 +1,7 @@
 import { ThemeManager } from './themeManager';
 
 describe('ThemeManager', () => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let themeManager: ThemeManager;
   let body: HTMLElement;
   let header: HTMLElement;
@@ -59,7 +59,6 @@ describe('ThemeManager', () => {
     };
     Object.defineProperty(window, 'localStorage', { value: localStorageMock });
 
-
     Object.defineProperty(window, 'matchMedia', {
       writable: true,
       value: jest.fn().mockImplementation((query) => ({
@@ -69,8 +68,7 @@ describe('ThemeManager', () => {
       })),
     });
 
- themeManager = new ThemeManager();
-    
+    themeManager = new ThemeManager();
   });
 
   afterEach(() => {
@@ -86,7 +84,7 @@ describe('ThemeManager', () => {
       expect(themeIcon.className).toBe('fas fa-sun');
       expect(headingText.style.color).toBe('rgb(226, 232, 240)');
       expect(logo.className).toBe('fa-solid fa-toolbox');
-      expect(logo.style.color).toBe('rgb(226, 232, 240)'); 
+      expect(logo.style.color).toBe('rgb(226, 232, 240)');
       expect(searchBar.dataset.theme).toBe('dark');
       navbuttons.forEach((button) => {
         expect(button.dataset.theme).toBe('dark');
@@ -99,9 +97,9 @@ describe('ThemeManager', () => {
 
       expect(body.dataset.theme).toBe('light');
       expect(themeIcon.className).toBe('fas fa-moon');
-      expect(headingText.style.color).toBe('rgb(45, 55, 72)'); 
+      expect(headingText.style.color).toBe('rgb(45, 55, 72)');
       expect(logo.className).toBe('fa-solid fa-toolbox');
-      expect(logo.style.color).toBe('rgb(45, 55, 72)'); 
+      expect(logo.style.color).toBe('rgb(45, 55, 72)');
       expect(searchBar.dataset.theme).toBe('light');
       navbuttons.forEach((button) => {
         expect(button.dataset.theme).toBe('light');
@@ -116,9 +114,9 @@ describe('ThemeManager', () => {
 
       expect(body.dataset.theme).toBe('dark');
       expect(themeIcon.className).toBe('fas fa-sun');
-      expect(headingText.style.color).toBe('rgb(226, 232, 240)'); 
+      expect(headingText.style.color).toBe('rgb(226, 232, 240)');
       expect(logo.className).toBe('fa-solid fa-toolbox');
-      expect(logo.style.color).toBe('rgb(226, 232, 240)'); 
+      expect(logo.style.color).toBe('rgb(226, 232, 240)');
       expect(searchBar.dataset.theme).toBe('dark');
       navbuttons.forEach((button) => {
         expect(button.dataset.theme).toBe('dark');
@@ -131,9 +129,9 @@ describe('ThemeManager', () => {
 
       expect(body.dataset.theme).toBe('light');
       expect(themeIcon.className).toBe('fas fa-moon');
-      expect(headingText.style.color).toBe('rgb(45, 55, 72)'); 
+      expect(headingText.style.color).toBe('rgb(45, 55, 72)');
       expect(logo.className).toBe('fa-solid fa-toolbox');
-      expect(logo.style.color).toBe('rgb(45, 55, 72)'); 
+      expect(logo.style.color).toBe('rgb(45, 55, 72)');
       expect(searchBar.dataset.theme).toBe('light');
       navbuttons.forEach((button) => {
         expect(button.dataset.theme).toBe('light');
@@ -151,7 +149,7 @@ describe('ThemeManager', () => {
 
     it('removes scrolled class when scrollY <= 50', () => {
       Object.defineProperty(window, 'scrollY', { value: 100, writable: true });
-      window.dispatchEvent(new Event('scroll')); 
+      window.dispatchEvent(new Event('scroll'));
       Object.defineProperty(window, 'scrollY', { value: 40, writable: true });
       window.dispatchEvent(new Event('scroll'));
 
