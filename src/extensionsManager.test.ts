@@ -114,12 +114,12 @@ describe('ExtensionsManager', () => {
 
   describe('searching tools', () => {
     it('renders tools matching the search query', () => {
-      searchBar.value = 'TypeScript';
+      searchBar.value = 'Webpack';
       searchBar.dispatchEvent(new Event('input'));
 
       const cards = extensionsList.querySelectorAll('.card-group');
-      expect(cards.length).toBe(2);
-      expect(cards[0].textContent).toMatch(/TypeScript/i);
+      expect(cards.length).toBe(1);
+      expect(cards[0].textContent).toMatch(/Webpack/i);
     });
 
     it('renders no tools when search query matches nothing', () => {
