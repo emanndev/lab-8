@@ -10,12 +10,12 @@
     "icon": "fas fa-cogs"
   },
   {
-    "name": "TypeScript",
-    "description": "A typed superset of JavaScript that compiles to plain JavaScript, enhancing code reliability.",
-    "version": "5.2.2",
-    "numberOfDownloads": 3500000,
+    "name": "Lodash",
+    "description": "Lodash is a JavaScript library that helps programmers write more concise and maintainable JavaScript",
+    "version": "4.17.21",
+    "numberOfDownloads": 2700000,
     "lastUpdated": "2025-04-15",
-    "homepage": "https://www.typescriptlang.org/",
+    "homepage": "https://lodash.com/",
     "active": true,
     "icon": "fas fa-code"
   },
